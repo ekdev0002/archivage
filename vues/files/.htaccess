@@ -1,0 +1,2 @@
+﻿RewriteEngine  on
+RewriteRule ^(.*)$ /archivage/vues/filtre_securite.php [L]
