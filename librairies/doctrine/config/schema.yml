@@ -1,0 +1,75 @@
+Profil:
+  columns:
+    libelle:
+      type: string(255)
+      notnull: true
+Archive:
+  columns:
+    fichier:
+      type: string
+    titre:
+      type: string
+    motcle:
+      type: string
+    nomfichier:
+      type: string
+    nomfichierrel:
+      type: string
+    date_publication:
+      type: string
+    id_categorie:
+      type: integer
+    id_acteur:
+      type: integer
+  relations:
+    Categorie:
+      class: Categorie
+      local: id
+      foreign: fk_ref_categorie
+    Acteur:
+      class: Acteur
+      local: id
+      foreign: fk_ref_acteur
+
+
+# Acteur
+Acteur:
+  columns:
+    nom:
+      type: string(255)
+    prenom:
+      type: string(255)
+    sexe:
+      type: string(255)
+    photo:
+      type: string(255)
+    matricule:
+      type: string
+    fonction:
+      type: string
+    nationalite:
+      type: string
+    situationmatri:
+      type: string
+    datenaissance:
+      type: string
+    telephone:
+      type: string
+    login:
+      type: string
+    password:
+      type: string
+    id_profil:
+      type: integer
+  relations:
+    Profil:
+      class: Profil
+      local: id
+      foreign: fk_ref_profil
+
+# Categorie :
+Categorie:
+  columns:
+    libelle:
+      type: string(255)
+      notnull: true
